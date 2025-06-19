@@ -126,6 +126,10 @@
     border-radius: 8px;
     width: 295px;
 }
+.error-msg {
+  color: rgb(255, 99, 71);
+}
+
 .btn-submit {
     margin-top: 30px;
     padding: 10px 20px;
