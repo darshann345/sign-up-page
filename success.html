@@ -7,25 +7,17 @@
   <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
- <div class="thanks-for-sub success-text">
-  <div>
-    <img src="assets/images/icon-success.svg" alt="success-icon" />
-    <h1>Thanks for subscribing!</h1>
-    <p class="card-para">
-      A confirmation email has been sent to
-      <span id="user-email"></span>. Please open it and click the button inside to confirm your subscription.
-    </p>
-    <button class="dismiss-btn" onclick="dismiss()">Dismiss message</button>
+  <div class="thanks-for-sub success-text">
+    <div>
+      <img src="assets/images/icon-success.svg" alt="success-icon" />
+      <h1>Thanks for subscribing!</h1>
+      <p class="card-para">
+        A confirmation email has been sent to
+        <span id="user-email"></span>. Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dismiss-btn">Dismiss message</button>
+    </div>
   </div>
-</div>
-
-
-  <script>
-    document.getElementById('user-email').innerText = localStorage.getItem('userEmail') || 'your email';
-
-    function dismiss() {
-      window.location.href = "index.html";
-    }
-  </script>
+  <script src="index.js"></script>
 </body>
 </html>

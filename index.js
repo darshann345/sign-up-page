@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = '/success.html';
       } else {
         errorMsg = document.createElement('em');
+        errorMsg.classList.add('error-msg'); // Critical for Cypress color match
         errorMsg.textContent = 'Valid email required.';
         emailInput.classList.add('error');
         emailInput.parentNode.appendChild(errorMsg);
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (dismissBtn) {
     dismissBtn.addEventListener('click', () => {
-      window.location.href = '/index.html'; // Back to form
+      window.location.href = '/index.html';
     });
   }
 });
