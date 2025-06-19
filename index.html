@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stay Updated</title>
-    <link rel="stylesheet" href="./index.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stay Updated</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
-
-<body class = "main">
-    <div class="card">
-        <div class="card-text">
+<body class="main">
+  <div class="card">
+    <div class="card-text">
       <h1>Stay updated!</h1>
       <p class="card-paragraph">
         Join 60,000+ product managers receiving monthly updates on:
@@ -32,21 +30,32 @@
       <div class="sign-up-form">
         <label for="email" class="email-input-label">Email Address</label>
         <input id="email" type="email" placeholder="email@company.com" />
-        <button class="sub-btn">Subscribe to monthly newsletter</button>
+        <em class="error-msg" style="display: none;">Please enter a valid email address</em>
+        <button class="sub-btn" onclick="submitForm()">Subscribe to monthly newsletter</button>
       </div>
     </div>
-
     <div class="card-image">
       <img src="assets/images/illustration-sign-up-desktop.svg" alt="illustration" />
     </div>
-        
+  </div>
 
-    </div>
-    <footer>
-      Challenge by Crio Coded by Darshan N
-    </footer>
+  <footer class="footer">
+    Challenge by Crio Coded by Darshan N
+  </footer>
 
-    <script src="./index.js"></script>
+  <script>
+    function submitForm() {
+      const email = document.getElementById('email').value;
+      const errorMsg = document.querySelector('.error-msg');
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      if (!emailPattern.test(email)) {
+        errorMsg.style.display = 'block';
+      } else {
+        localStorage.setItem('userEmail', email);
+        window.location.href = "success.html";
+      }
+    }
+  </script>
 </body>
-
 </html>

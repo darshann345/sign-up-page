@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stay Updated</title>
-    <link rel="stylesheet" href="./index.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription Success</title>
+  <link rel="stylesheet" href="index.css"/>
 </head>
-
 <body>
-    <div class="submit-card">
-       
-        <div>
-            <img src="assets/images/icon-success.svg" alt="success-icon" />
-            <h1>Thanks for subscribing!</h1>
-             <p class = "card-para">
-                A confirmation email has been sent to
-                <span id = "user-email"></span>. Please open it and
-                the button inside to confirm your
-                subscription.
-
-            </p>
-            <buttom class="btn-submit">Dismiss message</buttom>
-           
-        </div>
-
+  <div class="submit-card">
+    <div>
+      <img src="assets/images/icon-success.svg" alt="success-icon" />
+      <h1>Thanks for subscribing!</h1>
+      <p class="card-para">
+        A confirmation email has been sent to
+        <span id="user-email"></span>. Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dismiss-btn" onclick="dismiss()">Dismiss message</button>
     </div>
-<button class="dismiss-btn">Dismiss message</button>
+  </div>
 
+  <script>
+    document.getElementById('user-email').innerText = localStorage.getItem('userEmail') || 'your email';
 
-    <script src="./index.js"></script>
+    function dismiss() {
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
-
 </html>
-git push -u origin main
