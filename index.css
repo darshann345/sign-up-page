@@ -126,9 +126,19 @@
     border-radius: 8px;
     width: 295px;
 }
+em {
+  color: rgb(255, 99, 71);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 .error-msg {
   color: rgb(255, 99, 71);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: none;
 }
+
 
 .btn-submit {
     margin-top: 30px;
