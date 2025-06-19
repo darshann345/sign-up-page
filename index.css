@@ -1,0 +1,199 @@
+/* General page styling */
+body {
+    background-color: #150236;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+/* Card container */
+.card {
+    background-color: white;
+    width: 55vw;
+    height: 85vh;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+.submit-card{
+    background-color: white;
+    width: 25vw;
+    height: 65vh;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+
+}
+
+/* Card image */
+.card-image img {
+    position: relative;
+    width: 350px;
+    margin-right: 25px;
+}
+
+/* Text section */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 30px;
+    margin-right: 40px;
+    gap:20px;
+}
+
+
+/* Headings */
+.card-text h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-right: 200px;
+}
+
+/* Paragraph text */
+.card-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Points container */
+.card-points {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Points items */
+.card-points-items {
+    display: flex;
+    flex-direction: row; /* Ensure image is above text */
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+/* Success icon */
+.card-points-items img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Success text */
+.card-points-items p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+.card-paragraph{
+    white-space: preline;
+    margin: 0px;
+}
+.form-input {
+    margin-top: 30px; /* Make it more noticeable */
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.form-input label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-input input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 295px;
+}
+.btn-submit {
+    margin-top: 30px;
+    padding: 10px 20px;
+    width: 21vw;
+    height: 50px;
+    background-color: #211a38;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.card-para{
+ white-space: pre-line;
+}
+@media screen and (min-width: 350px) and (max-width:768px){
+    .card {
+        flex-direction: column-reverse;
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-image img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card-text {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .card-text h1 {
+        font-size: 28px;
+    }
+
+    .card-text p,
+    .card-points-items p {
+        font-size: 14px;
+         padding: 0px;
+         margin-right: 80px;
+
+    }
+    .form-input label {
+        margin-right: 280px;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    .form-input input {
+        width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .submit-card {
+        width: 70vw;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .card-par{
+        white-space: pre-line;
+    margin: 0px;
+    padding: auto;
+    }
+}
+
+
