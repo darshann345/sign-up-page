@@ -1,5 +1,5 @@
 /* General page styling */
-body {
+.main {
     background-color: #150236;
     display: flex;
     align-items: center;
@@ -101,19 +101,19 @@ body {
     white-space: preline;
     margin: 0px;
 }
-.form-input {
+.sign-up-form {
     margin-top: 30px; /* Make it more noticeable */
     display: flex;
     flex-direction: column;
     width: 70%;
 }
 
-.form-input label {
+.sign-up-form label {
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-.form-input input {
+.sign-up-form input {
     padding: 10px;
     font-size: 14px;
     border: 1px solid #ccc;
@@ -167,15 +167,15 @@ body {
          margin-right: 80px;
 
     }
-    .form-input label {
+    .sign-up-form label {
         margin-right: 280px;
     }
 
-    .form-input {
+    .sign-up-form {
         width: 100%;
     }
 
-    .form-input input {
+    .sign-up-form input {
         width: 100%;
     }
 
