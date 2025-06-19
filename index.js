@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const emailInput = document.getElementById('email');
-  const submitButton = document.querySelector('.btn-submit');
+  const submitButton = document.querySelector('.sub-btn');
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (submitButton && emailInput) {
@@ -8,16 +8,15 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const emailValue = emailInput.value.trim();
       let errorMsg = document.querySelector('em');
-
       if (errorMsg) errorMsg.remove();
 
       if (emailRegex.test(emailValue)) {
         localStorage.setItem('subscribedEmail', emailValue);
-        window.location.href = '/success.html';
+        window.location.href = 'success.html'; // no leading slash to avoid Vercel routing issues
       } else {
         errorMsg = document.createElement('em');
-        errorMsg.classList.add('error-msg'); // Critical for Cypress color match
         errorMsg.textContent = 'Valid email required.';
+        errorMsg.classList.add('error-msg');
         emailInput.classList.add('error');
         emailInput.parentNode.appendChild(errorMsg);
       }
@@ -36,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (dismissBtn) {
     dismissBtn.addEventListener('click', () => {
-      window.location.href = '/index.html';
+      window.location.href = 'index.html';
     });
   }
 });
